@@ -1,9 +1,11 @@
 import React from 'react'
 
+import {View, Text} from 'react-native'
+
 function HomeScreen() {
   return (
    <View>
-    <Text>This is the home screen</Text>
+    <Text style={{color:"red"}}>This is the home screen</Text>
    </View>
   )
 }
