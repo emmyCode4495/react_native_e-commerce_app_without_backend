@@ -7,6 +7,7 @@ import LoginScreen from '../ReactEcommerceApp/src/Screens/authScreens/LoginScree
 import CreateAccountScreen from '../ReactEcommerceApp/src/Screens/authScreens/CreateAccountScreen'
 import colors from '../ReactEcommerceApp/src/data/colors'
 import NotVerifyScreen from '../ReactEcommerceApp/src/Screens/NotVerifyScreen'
+import SingleProductScreen from '../ReactEcommerceApp/src/Screens/SingleProductScreen'
 
 export default function App() {
   return (
@@ -14,7 +15,7 @@ export default function App() {
       <StatusBar 
         barStyle="light content"
         backgroundColor= {colors.main} />
-        <HomeScreen />
+        <SingleProductScreen />
   </NativeBaseProvider>
   );
 }
