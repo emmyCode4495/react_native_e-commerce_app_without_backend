@@ -1,12 +1,16 @@
 import React from 'react'
+import colors from '../data/colors'
 
-import {View, Text} from 'react-native'
+import {Box} from 'native-base'
+import HomeProducts from '../Components/HomeProducts'
+import HomeSearch from '../Components/HomeSearch'
 
 function HomeScreen() {
   return (
-   <View>
-    <Text style={{color:"red"}}>This is the home screen</Text>
-   </View>
+   <Box flex={1} bg={colors.subGreen}>
+      <HomeSearch/>
+      <HomeProducts/>
+   </Box>
   )
 }
 

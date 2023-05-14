@@ -7,7 +7,7 @@ function NotVerifyScreen() {
   return (
  <Box flex={1} bg={colors.main} safeAreaTop>
   <Center w='full' h={250}>
-    <Image source={require("../assets/bag.png")}
+    <Image source={require("../assets/shoppingbag.png")}
       alt="shoping bag logo"
       size="lg"
     />
