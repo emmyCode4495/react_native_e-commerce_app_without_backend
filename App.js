@@ -9,6 +9,7 @@ import colors from '../ReactEcommerceApp/src/data/colors'
 import NotVerifyScreen from '../ReactEcommerceApp/src/Screens/NotVerifyScreen'
 import SingleProductScreen from '../ReactEcommerceApp/src/Screens/SingleProductScreen'
 import CartScreen from '../ReactEcommerceApp/src/Screens/CartScreen'
+import ProfileScreen from '../ReactEcommerceApp/src/Screens/ProfileScreen'
 
 export default function App() {
   return (
@@ -16,7 +17,7 @@ export default function App() {
       <StatusBar 
         barStyle="light content"
         backgroundColor= {colors.main} />
-        <CartScreen />
+        <ProfileScreen />
   </NativeBaseProvider>
   );
 }
