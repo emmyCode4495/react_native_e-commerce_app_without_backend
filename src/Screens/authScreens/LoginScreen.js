@@ -11,7 +11,7 @@ import colors from '../../data/colors';
 
 function LoginScreen() {
   return (
-   <Box flex={1} bg={colors.black} justifyContent="center">
+   <Box flex={1} safeAreaTop bg={colors.black} justifyContent="center">
       <Image flex={1} alt="Logo"
         resizeMode='cover'
         size="lg"
