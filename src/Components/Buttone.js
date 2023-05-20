@@ -8,7 +8,7 @@ function Buttone({mt,bg,color,children,onPress}) {
     rounded="full"
     _text={{color:color, fontWeight:'bold'}}
     _pressed = {{bg:bg}}
-    onPresss={onPress}
+    onPress={onPress}
     >
         {children}
     </Button>
