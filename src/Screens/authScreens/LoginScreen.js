@@ -9,7 +9,7 @@ import {Box,
 import {Icon} from 'react-native-elements';
 import colors from '../../data/colors';
 
-function LoginScreen() {
+function LoginScreen({navigation}) {
   return (
    <Box flex={1} safeAreaTop bg={colors.black} justifyContent="center">
       <Image flex={1} alt="Logo"
