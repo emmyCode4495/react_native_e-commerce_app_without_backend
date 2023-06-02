@@ -1,5 +1,5 @@
 import React from 'react'
-import {HStack} from 'native-base'
+import {HStack, Text} from 'native-base'
 import colors from '../data/colors'
 import Icons from 'react-native-vector-icons/Entypo';
 import Icon from 'react-native-vector-icons/FontAwesome';

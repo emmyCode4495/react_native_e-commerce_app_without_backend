@@ -6,6 +6,7 @@ import Buttone from '../Components/Buttone'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Icons from 'react-native-vector-icons/Entypo';
 import CheckIcon from 'react-native-vector-icons/AntDesign';
+import { useNavigation } from '@react-navigation/native';
 
 
 const paymentMethods=[
@@ -31,6 +32,7 @@ const paymentMethods=[
   },
 ]
 function PaymentScreen() {
+  const navigation = useNavigation()
   return (
     <Box flex={1} safeAreaTop bg={colors.main} py={5}>
     {/* HEADER */}
@@ -80,7 +82,7 @@ function PaymentScreen() {
           }
           <Buttone bg={colors.main} 
           color={colors.white}
-          mt={5}>
+          mt={5} onPress={()=>navigation.navigate("Placeorder")}>
           CONTINUE
           </Buttone>
           <Text italic textAlign="center">

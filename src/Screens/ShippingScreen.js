@@ -8,6 +8,7 @@ import {
 import React from 'react'
 import colors from '../data/colors'
 import Buttone from '../Components/Buttone'
+import { useNavigation } from '@react-navigation/native'
 
 const shippingInputs=[
   {
@@ -28,6 +29,7 @@ const shippingInputs=[
   },
 ]
 function ShippingScreen() {
+  const navigation = useNavigation()
   return (
    <Box flex={1} safeAreaTop bg={colors.main} py={5}>
     {/* HEADER */}
@@ -71,7 +73,7 @@ function ShippingScreen() {
           ))}
           <Buttone bg={colors.main} 
           color={colors.white}
-          mt={5}>
+          mt={5} onPress={()=>navigation.navigate("Checkout")}>
           CONTINUE
           </Buttone>
         </VStack>

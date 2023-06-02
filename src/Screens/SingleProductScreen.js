@@ -6,14 +6,17 @@ import Rating from '../Components/Rating'
 import NumericInput from 'react-native-numeric-input'
 import Buttone from '../Components/Buttone'
 import Reviews from '../Components/reviews'
+import { useNavigation } from '@react-navigation/native'
 
-function SingleProduct() {
+function SingleProductScreen({route}) {
   const [value, setValue] = useState(0)
+  const navigation = useNavigation()
+  const products = route.params
   return (
 <Box safeArea flex={1} bg={colors.white}>
   <ScrollView px={5} showsVerticalScrollIndicator={false}>
   <Image
-    source={{uri:"https://img.freepik.com/free-photo/new-pair-white-sneakers-isolated-white_93675-133039.jpg?w=826&t=st=1684062594~exp=1684063194~hmac=0ec5c000b6419c8961ff6cc960ad44f4c5015acd279efcaff0fef39b1db5312c"}}
+    source={{uri:products.image}}
     alt="Image"
     w="full"
     h={300}
@@ -26,26 +29,35 @@ function SingleProduct() {
   lineHeight={22}>
     Plain white Nike Sneakers
   </Heading>
-  <Rating value={4}/>
+  <Rating value={products.rating} text={`${products.numReviews} reviews`}/>
   <HStack space={2} alignItems="center" my={5}>
-    <NumericInput 
-    value={value} 
-    totalWidth={140}
-    totalHeight={30}
-    iconSize={25}
-    rounded 
-    step={1}
-    // onChange={}
-    maxValue={15}
-    minValue={0}
-    borderColor={colors.deepGray}
-    textColor={colors.black}
-    iconStyle={{color:colors.white}}
-    rightButtonBackgroundColor={colors.main}
-    leftButtonBackgroundColor={colors.main}/>
+    {
+      products.countInStock > 0 ? (
+        <NumericInput 
+        value={value} 
+        totalWidth={140}
+        totalHeight={30}
+        iconSize={25}
+        rounded 
+        step={1}
+        // onChange={}
+        maxValue={products.countInStock}
+        minValue={0}
+        borderColor={colors.deepGray}
+        textColor={colors.black}
+        iconStyle={{color:colors.white}}
+        rightButtonBackgroundColor={colors.main}
+        leftButtonBackgroundColor={colors.main}/>
+      ): (
+        <Heading bold color={colors.red} italic fontSize={12}>
+        Out of stock
+      </Heading>
+      )
+    }
+    
     <Spacer />
     <Heading bold color={colors.black} fontSize={19}>
-      $400
+      ${products.price}
     </Heading>
   </HStack>
   <Text lineHeight={24} fontSize={12}>
@@ -57,7 +69,8 @@ function SingleProduct() {
   It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
   and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
   </Text>
-  <Buttone bg={colors.main} color={colors.white} mt={10}>
+  <Buttone bg={colors.main} 
+  color={colors.white} mt={10} onPress={()=>navigation.navigate("Cart")}>
     ADD TO CART
   </Buttone>
 
@@ -67,4 +80,4 @@ function SingleProduct() {
   )
 }
 
-export default SingleProduct
+export default SingleProductScreen;

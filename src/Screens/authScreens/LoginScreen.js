@@ -67,10 +67,13 @@ function LoginScreen({navigation}) {
         bg={colors.main}
         _pressed={{
           bg:colors.main
-        }}>
+        }}
+        onPress={()=>navigation.navigate("Bottom")}>
           LOGIN
         </Button>
-        <Pressable mt={4}>
+        <Pressable mt={4}
+        onPress={()=>navigation.navigate("Register")}
+        >
           <Text color={colors.deepestGray} style={{marginLeft:30,marginTop:-5, fontWeight:'bold'}}>SIGN UP</Text>
         </Pressable>
       </Box>

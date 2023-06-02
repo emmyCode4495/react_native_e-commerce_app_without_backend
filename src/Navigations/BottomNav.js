@@ -6,12 +6,14 @@ import Icons from 'react-native-vector-icons/Entypo';
 import ContactIcon from 'react-native-vector-icons/AntDesign';
 import ShoppingIcon from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
+import StackNav from '../Navigations/StackNav'
 
 import colors from '../data/colors';
 import HomeScreen from '../Screens/HomeScreen';
 import { Center, Pressable } from 'native-base';
 import ProfileScreen from '../Screens/ProfileScreen';
 import CartScreen from '../Screens/CartScreen';
+
 
 const Tab = createBottomTabNavigator()
 const CustomTab =({
@@ -31,7 +33,7 @@ shadow={2}>
 const BottomNav = () =>{
     return (
         <Tab.Navigator 
-        backBehavior="true"
+        backBehavior="Main"
         initialRouteName='Main'
         screenOptions={{
             tabBarShowLabel:false,
@@ -40,8 +42,8 @@ const BottomNav = () =>{
             tabBarHideOnKeyboard:true
         }}>
             <Tab.Screen 
-            name="main" 
-            component={HomeScreen} 
+            name="Main" 
+            component={StackNav} 
             options={{
                 tabBarIcon:({focused})=>(
                     <Center>

@@ -4,8 +4,10 @@ import colors from '../data/colors'
 import CartEmpty from '../Components/cartEmpty'
 import CartItems from '../Components/CartItems'
 import Buttone from '../Components/Buttone'
+import { useNavigation } from '@react-navigation/native'
 
 function CartScreen() {
+  const navigation = useNavigation()
   return (
    <Box flex={1} safeAreaTop bg={colors.subGreen}>
     {/* HEADER */}
@@ -47,7 +49,9 @@ function CartScreen() {
           </HStack>
         </Center>
               <Center px={5}>
-                <Buttone bg={colors.black} color={colors.white} mt={10} bold>
+                <Buttone bg={colors.black} color={colors.white} mt={10} bold
+                  onPress={()=>navigation.navigate("Shipping")}
+                >
                   CHECKOUT
                 </Buttone>
               </Center>

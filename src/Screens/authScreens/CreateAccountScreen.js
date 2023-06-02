@@ -14,7 +14,7 @@ import ContactIcon from 'react-native-vector-icons/AntDesign';
 
 import colors from '../../data/colors';
 
-function CreateAccountScreen() {
+function CreateAccountScreen({navigation}) {
   return (
     <Box flex={1} bg={colors.black} justifyContent="center">
     <Image flex={1} alt="Logo"
@@ -110,10 +110,13 @@ function CreateAccountScreen() {
       bg={colors.main}
       _pressed={{
         bg:colors.main
-      }}>
+      }}
+      onPress={()=>navigation.navigate("Login")}>
         SIGN UP
       </Button>
-      <Pressable mt={4}>
+      <Pressable mt={4}
+        onPress={()=>navigation.navigate("Login")}
+      >
         <Text color={colors.deepestGray} style={{marginLeft:30,marginTop:-5, fontWeight:'bold'}}>LOG IN</Text>
       </Pressable>
     </Box>

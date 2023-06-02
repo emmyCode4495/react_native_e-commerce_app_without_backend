@@ -7,7 +7,7 @@ const products = [
         price:90,
         countInStock: 3,
         rating: 3,
-        numRewviews: 4
+        numReviews: 4
     },
     {
         id: "2",
@@ -15,9 +15,9 @@ const products = [
         image:"https://img.freepik.com/free-photo/new-black-sneakers-isolated-white-background_93675-135051.jpg?w=826&t=st=1684037505~exp=1684038105~hmac=85f6e706a0cf3dbbd7aa3c7daa9ed2b38aaa62b9d91cd334bdcf4f18323bcfdd",
         description:"This is the description of the items in the cart",
         price:100,
-        countInStock: 15,
+        countInStock: 0,
         rating: 1.5,
-        numRewviews: 2
+        numReviews: 2
     },
     {
         id: "3",
@@ -27,7 +27,7 @@ const products = [
         price:40,
         countInStock: 7,
         rating: 3.5,
-        numRewviews: 4
+        numReviews: 4
     },
     {
         id: "4",
@@ -35,9 +35,9 @@ const products = [
         image:"https://img.freepik.com/free-photo/brown-leather-shoes_1203-8175.jpg?w=826&t=st=1684037639~exp=1684038239~hmac=1fdff02c68af2bbc7d59d20d823b9eccb2250ee45dd9c1e7175b1d6a732fbae0",
         description:"This is the description of the items in the cart",
         price:60,
-        countInStock: 5,
+        countInStock: 0,
         rating: 2.5,
-        numRewviews: 10
+        numReviews: 10
     },
     {
         id: "5",
@@ -47,7 +47,7 @@ const products = [
         price:70,
         countInStock: 15,
         rating: 2,
-        numRewviews: 15
+        numReviews: 15
     },
     {
         id: "6",
@@ -57,7 +57,7 @@ const products = [
         price:70,
         countInStock: 15,
         rating: 3,
-        numRewviews: 15
+        numReviews: 15
     },
 
     {
@@ -68,7 +68,7 @@ const products = [
         price:60,
         countInStock: 5,
         rating: 2.5,
-        numRewviews: 10
+        numReviews: 10
     },
     {
         id: "8",
@@ -78,7 +78,7 @@ const products = [
         price:70,
         countInStock: 15,
         rating: 2,
-        numRewviews: 15
+        numReviews: 15
     },
     {
         id: "9",
@@ -88,7 +88,7 @@ const products = [
         price:70,
         countInStock: 15,
         rating: 1.5,
-        numRewviews: 15
+        numReviews: 15
     },
     {
         id: "10",
@@ -98,7 +98,7 @@ const products = [
         price:70,
         countInStock: 15,
         rating: 2.5,
-        numRewviews: 15
+        numReviews: 15
     },
 
     {
@@ -109,7 +109,7 @@ const products = [
         price:60,
         countInStock: 5,
         rating: 5,
-        numRewviews: 10
+        numReviews: 10
     },
     {
         id: "12",
@@ -119,7 +119,7 @@ const products = [
         price:70,
         countInStock: 15,
         rating: 2.5,
-        numRewviews: 15
+        numReviews: 15
     },
     {
         id: "13",
@@ -129,7 +129,7 @@ const products = [
         price:70,
         countInStock: 15,
         rating: 3.5,
-        numRewviews: 15
+        numReviews: 15
     },
     {
         id: "14",
@@ -139,7 +139,7 @@ const products = [
         price:70,
         countInStock: 15,
         rating: 2.5,
-        numRewviews: 15
+        numReviews: 15
     },
 ];
 

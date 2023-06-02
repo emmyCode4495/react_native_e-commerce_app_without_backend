@@ -4,8 +4,11 @@ import { HStack,Input, Pressable,Box } from 'native-base';
 import colors from '../data/colors'
 import { Icon } from 'react-native-elements';
 import Icons from 'react-native-vector-icons/Entypo';
+import { useNavigation } from '@react-navigation/native';
 
 function HomeSearch() {
+  const navigation = useNavigation()
+
   return (
     <HStack space={3} 
     w='full' 
@@ -25,7 +28,7 @@ function HomeSearch() {
         bg:colors.white
       }}
       />
-      <Pressable ml={3}>
+      <Pressable ml={3} onPress={()=>navigation.navigate("Cart")}>
         <Icons
         name="shopping-cart"
         size={30}
